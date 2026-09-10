@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.2",
+  "state": "RESULTS_UNLOCKED_CORRECTED",
+  "generated_date": "2026-09-11",
+  "supersedes_public_wording_version": "1.1",
+  "correction_scope": "semantic_labels_only_no_numeric_or_model_changes",
+  "analysis_language": "association_only",
+  "mechanical_conclusion": {
+    "label": "CONFIRMATORY_NULL_OR_INCONCLUSIVE",
+    "holm_alpha": 0.05,
+    "passing_confirmatory_estimands": [],
+    "effect_direction": "RD_11-00 negative; IC_add negative in the primary analysis",
+    "precision": "RD_11-00 ordinary 95% CI excludes zero, but Holm P and 97.5% simultaneous CI do not; IC_add intervals include zero",
+    "sensitivity_robustness": "RD_11-00 remains negative across every executed sensitivity but precision is not uniform; IC_add is imprecise and changes sign in two specifications"
+  },
+  "integrity": {
+    "inventory_state_before_unlock": "READY_FOR_RESULTS_UNLOCK_RESULTS_STILL_SEALED",
+    "inventory_results_unlocked_flag_before_unlock": false,
+    "checked_artifact_instances": 28,
+    "all_hashes_match": true,
+    "scheme_b_numeric_max_absolute_difference": 0,
+    "no_refit_or_model_change": true,
+    "original_sealed_results_sha256": "9070F0511B88F4FAC2D4E97FA492AC86CD1AB1E48288A9A5459B345632EDE59D",
+    "scheme_b_sealed_results_sha256": "56591B4D92DF8FD3BD57C8CEF4DBF33EBEC4F49CBACCA04238A9E6FE11F3BB32"
+  },
+  "nigeria_primary": {
+    "model": "adjusted_survey_weighted_logistic",
+    "n": 10643,
+    "standardized_risks": [
+      {"cell": "00", "estimate": 0.5867138283685376, "se": 0.00816248629315462, "ci95": [0.5707006014370601, 0.602727055300015]},
+      {"cell": "10", "estimate": 0.6089832987727366, "se": 0.0250124358271748, "ci95": [0.5599137142583385, 0.6580528832871347]},
+      {"cell": "01", "estimate": 0.532108936152372, "se": 0.011416420768812474, "ci95": [0.509712116121012, 0.554505756183732]},
+      {"cell": "11", "estimate": 0.5263972273747768, "se": 0.026190542601058554, "ci95": [0.4750164241407181, 0.5777780306088355]}
+    ],
+    "confirmatory_estimands": [
+      {"estimand": "RD_11-00", "estimate": -0.060316600993760794, "se": 0.027626711319485815, "ci95": [-0.1145148908090039, -0.006118311178517688], "p_raw": 0.029195846910906927, "p_holm": 0.058391693821813855, "simultaneous_ci_level": 0.975, "simultaneous_ci": [-0.12231167056277688, 0.0016784685752552903], "passes_holm_0_05": false},
+      {"estimand": "IC_add", "estimate": -0.027981179181794213, "se": 0.03689834557929677, "ci95": [-0.10036863074209601, 0.04440627237850758], "p_raw": 0.44839126413980634, "p_holm": 0.44839126413980634, "simultaneous_ci_level": 0.975, "simultaneous_ci": [-0.1107820408086596, 0.05481968244507117], "passes_holm_0_05": false}
+    ],
+    "frozen_secondary_estimands": [
+      {"estimand": "RD_10-00", "estimate": 0.02226947040419902, "ci95": [-0.029217103670706943, 0.07375604447910498], "p_raw_supportive": 0.39629500916529725},
+      {"estimand": "RD_01-00", "estimate": -0.0546048922161656, "ci95": [-0.08259428211057379, -0.02661550232175741], "p_raw_supportive": 0.00013576317359400945},
+      {"estimand": "RR_10/00", "estimate": 1.0379562732757182, "ci95": [0.9535159538086958, 1.129874357035212]},
+      {"estimand": "RR_01/00", "estimate": 0.906930960928594, "ci95": [0.8618643347994713, 0.954354107345975]},
+      {"estimand": "RR_11/00", "estimate": 0.8971958762903512, "ci95": [0.8101895744645111, 0.9935457895325844]},
+      {"estimand": "risk_scale_ratio_interaction", "estimate": 0.9530901529928458, "ci95": [0.8378591846086795, 1.0841688632394522]}
+    ]
+  },
+  "nigeria_sensitivities": [
+    {"order": 1, "name": "25_km_radius", "n": 10643, "role": "supportive", "RD_11-00": {"estimate": -0.07016140058027576, "ci95": [-0.13405733114162, -0.006265470018931518], "p_raw": 0.03141128267710972, "p_holm": 0.06282256535421944, "simultaneous_ci97_5": [-0.1432491801731564, 0.00292637901260491]}, "IC_add": {"estimate": -0.014629357213002292, "ci95": [-0.0928934568886227, 0.06363474246261812], "p_raw": 0.7138979152589096, "p_holm": 0.7138979152589096, "simultaneous_ci97_5": [-0.10415226136157359, 0.074893546935569]}},
+    {"order": 2, "name": "100_km_radius", "n": 10643, "role": "supportive", "RD_11-00": {"estimate": -0.04791694389274581, "ci95": [-0.09611223064108915, 0.00027834285559752425], "p_raw": 0.05133588598368661, "p_holm": 0.10267177196737322, "simultaneous_ci97_5": [-0.10304543899928134, 0.007211551213789719]}, "IC_add": {"estimate": -0.007092221239365926, "ci95": [-0.09596023279179448, 0.08177579031306263], "p_raw": 0.8756126442202311, "p_holm": 0.8756126442202311, "simultaneous_ci97_5": [-0.10874447959352966, 0.09456003711479781]}},
+    {"order": 3, "name": "scheme_b", "n": 10643, "role": "supportive_adjusted_estimate_p_unadjusted_for_multiplicity", "model": "adjusted_survey_weighted_logistic_with_standardization", "RD_11-00": {"estimate": -0.0459467448427574, "ci95": [-0.08415033912568354, -0.007743150559831269], "p_supportive_unadjusted_for_multiplicity": 0.018451630605788128, "p_holm": null, "simultaneous_ci97_5": null}, "IC_add": {"estimate": 0.017859641768194323, "ci95": [-0.0239787623033363, 0.05969804583972495], "p_supportive_unadjusted_for_multiplicity": 0.402500297045417, "p_holm": null, "simultaneous_ci97_5": null}},
+    {"order": 4, "name": "livebirth_only", "n": 10458, "role": "supportive", "RD_11-00": {"estimate": -0.05948181064997049, "ci95": [-0.11381743908581915, -0.0051461822141218375], "p_raw": 0.03193070017507469, "p_holm": 0.06386140035014938, "simultaneous_ci97_5": [-0.12163397590167284, 0.0026703546017318586]}, "IC_add": {"estimate": -0.0283714042476112, "ci95": [-0.10109714495627657, 0.044354336461054175], "p_raw": 0.4442149251626668, "p_holm": 0.4442149251626668, "simultaneous_ci97_5": [-0.11155922013740141, 0.054816411642179014]}},
+    {"order": 5, "name": "strict_fixed_effects", "n": 10643, "role": "supportive", "RD_11-00": {"estimate": -0.029979490464464464, "ci95": [-0.08206019979541611, 0.02210121886648718], "p_raw": 0.2589876936025795, "p_holm": 0.517975387205159, "simultaneous_ci97_5": [-0.08955235169648025, 0.029593370767551322]}, "IC_add": {"estimate": 0.015058430187432803, "ci95": [-0.05626373124253131, 0.08638059161739692], "p_raw": 0.678795558963708, "p_holm": 0.678795558963708, "simultaneous_ci97_5": [-0.06652389233115806, 0.09664075270602367]}},
+    {"order": 6, "name": "v190", "n": 10643, "role": "supportive", "RD_11-00": {"estimate": -0.04973856275325739, "ci95": [-0.10416484747519858, 0.004687721968683813], "p_raw": 0.07323348287943138, "p_holm": 0.14646696575886275, "simultaneous_ci97_5": [-0.11199442579288506, 0.012517300286370284]}, "IC_add": {"estimate": -0.028268801253656273, "ci95": [-0.10015784879231109, 0.04362024628499854], "p_raw": 0.4405888301653641, "p_holm": 0.4405888301653641, "simultaneous_ci97_5": [-0.11049956016877904, 0.0539619576614665]}},
+    {"order": 7, "name": "pnc_outcome_unknown_DK_as_Y_1", "n": 10692, "role": "supportive", "RD_11-00": {"estimate": -0.055885608586918156, "ci95": [-0.10958412405688031, -0.0021870931169559946], "p_raw": 0.041383656358014026, "p_holm": 0.08276731271602805, "simultaneous_ci97_5": [-0.11730898609520832, 0.005537768921372005]}, "IC_add": {"estimate": -0.028109622272890267, "ci95": [-0.10015010309722185, 0.04393085855144131], "p_raw": 0.44412546300028766, "p_holm": 0.44412546300028766, "simultaneous_ci97_5": [-0.11051356977171625, 0.05429432522593572]}},
+    {"order": 8, "name": "pnc_outcome_unknown_DK_as_Y_0", "n": 10692, "role": "supportive", "RD_11-00": {"estimate": -0.06150990940857248, "ci95": [-0.11550737391310098, -0.0075124449040439925], "p_raw": 0.025604944541761505, "p_holm": 0.05120988908352301, "simultaneous_ci97_5": [-0.12327524161049246, 0.0002554227933474901]}, "IC_add": {"estimate": -0.026645251381151036, "ci95": [-0.09890626706652277, 0.04561576430422069], "p_raw": 0.46957246030387556, "p_holm": 0.46957246030387556, "simultaneous_ci97_5": [-0.10930145903847217, 0.0560109562761701]}}
+  ],
+  "burkina_faso": {
+    "reporting_level": "direct_survey_weighted_descriptive_plus_reduced_C_plus_K_supportive",
+    "adjusted_joint_CxK_fitted": false,
+    "direct_n": 4547,
+    "direct_survey_weighted_descriptive_risks": [
+      {"cell": "00", "estimate": 0.17384069446898318, "ci95": [0.1556099588972069, 0.19207143004075944]},
+      {"cell": "10", "estimate": 0.10051185777491457, "ci95": [0.06064504135279886, 0.1403786741970303]},
+      {"cell": "01", "estimate": 0.21523243715235754, "ci95": [0.17753033855442918, 0.2529345357502859]},
+      {"cell": "11", "estimate": 0.2606683828288989, "ci95": [0.11762462587958905, 0.4037121397782088]}
+    ],
+    "direct_survey_weighted_descriptive_RD_11-00": {"estimate": 0.08682768835991575, "ci95": [-0.05515876811044859, 0.2288141448302801], "tested": false},
+    "reduced_C_plus_K": [
+      {"contrast": "C", "n": 4539, "RD": -0.05407972525521473, "RD_ci95": [-0.09729924336891033, -0.01086020714151914], "p_supportive_unadjusted_for_multiplicity": 0.01429595726663548, "RR": 0.7045562430080877, "RR_ci95": [0.5082492372685142, 0.9766851834927943]},
+      {"contrast": "K", "n": 4539, "RD": -0.015104583595169474, "RD_ci95": [-0.05466062707951999, 0.024451459889181043], "p_supportive_unadjusted_for_multiplicity": 0.4534470554942388, "RR": 0.9171399309985903, "RR_ci95": [0.7277182885070501, 1.1558671347366447]}
+    ],
+    "scheme_b": {"role": "supportive_direct_survey_weighted_descriptive", "direct_cell_risks": {"00": 0.17856243782858666, "10": 0.15576171405672917, "01": 0.1816095353993114, "11": 0.20650564002228297}, "reduced_C_plus_K_qc": "PASS", "standardized_reduced_contrast_available_in_sealed_aggregate": false}
+  },
+  "pooled_equal_country_direct_only": {
+    "role": "descriptive",
+    "direct_risks": {"00": 0.41376299808569494, "10": 0.35715835203672686, "01": 0.3082788008467128, "11": 0.2934026423982887},
+    "direct_RD_11-00": {"estimate": -0.12036035568740622, "ci95": [-0.19668104184447524, -0.044039669530337194], "tested": false}
+  },
+  "diagnostics": {
+    "nigeria_primary": {"converged": true, "iterations": 4, "boundary": false, "model_rank": 35, "model_columns": 35, "covariance_rank": 35, "warnings": [], "design_df": 1288, "standardized_prediction_range": [0.5263972273747768, 0.6089832987727366], "pearson_residual_quantiles": {"min": -3.03598, "p01": -2.48927, "median": 0.38835, "p99": 2.30468, "max": 4.62294}, "anonymous_psu_influence_norm_quantiles": {"min": 0.000286, "p01": 0.001002, "median": 0.011917, "p99": 0.109073, "max": 0.612949}, "high_influence_psu_deleted": false},
+    "sample_flow": {"nigeria": {"eligible": 10694, "pnc_outcome_known": 10645, "pnc_outcome_unknown_DK": 49, "complete_case": 10643, "weighted_ess": 7591.7802}, "burkina_faso": {"eligible": 4771, "pnc_outcome_known": 4547, "pnc_outcome_unknown_DK": 224, "reduced_complete_case": 4539, "weighted_ess": 3641.892}},
+    "burkina_adjusted_CxK_overlap_gate": "FAIL_region_and_calendar_month"
+  },
+  "ucdp_source_event_records": {"nigeria_scheme_b": 1723, "burkina_faso_scheme_b": 545, "meaning": "source-event records; not outcome events, exposed women, or participant counts"},
+  "limitations": ["observational association; no causal interpretation", "residual confounding", "exposure classification and linkage uncertainty", "spatial and temporal measurement uncertainty", "PNC outcome unknown/DK", "finite support, especially Burkina Faso joint cells"],
+  "disclosure_control": {"safe_aggregates_only": true, "excluded": ["identifiable coefficient tables", "region identifiers", "PSU identifiers", "coordinates", "microdata", "point-level climate data", "point-level conflict data"]},
+  "withdrawn": [{"analysis": "200_replicate_displacement", "status": "WITHDRAWN_WITHOUT_REPLACEMENT", "clarification": "200 perturbed-location replicates; not a 200 km radius analysis"}]
+}
