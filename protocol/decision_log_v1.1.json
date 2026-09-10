@@ -1,0 +1,60 @@
+{
+  "document": "D2 CxK SAP pre-unlock amendment decision log",
+  "version": "1.1",
+  "parent_sap_version": "1.0",
+  "parent_sap_sha256": "1F2D43ADB8FB45E79767F3403A9B46A515A1ED26FA446B76D14BCECC8E4D243E",
+  "trigger": "Public QC identified method ambiguity and mechanically unavailable displacement inputs while all real effect results remained sealed.",
+  "real_effect_results_read": false,
+  "decisions": [
+    {
+      "id": "A1",
+      "status": "LOCKED_PRE_UNLOCK",
+      "decision": "Scheme B uses exactly outcome-relative months -12 through -4. H_B is any monthly ERA5-Land P90 exceedance in those nine months. D_B is any SPI-3 <= -1.0 with endpoint -10 through -4 only. C_B is H_B AND D_B. K_B is any overlapping fatal UCDP GED 26.1 event within 50 km during the nine-month window.",
+      "prohibited_variants": ["SPI-3 endpoints -12 or -11", "SPI-9", "outcome month", "months -3 through -1", "same-month H/D requirement"]
+    },
+    {
+      "id": "A1_INPUT",
+      "status": "LOCKED_PRE_UNLOCK",
+      "decision": "Derive scheme-B country event files from the frozen UCDP GED 26.1 global ZIP because scheme-A country files have insufficient temporal envelopes.",
+      "source_sha256": "8C941D84954E555EE2E54F40FA04D9203BF1E2F962203D0A9930966C4947C667"
+    },
+    {
+      "id": "A2",
+      "status": "WITHDRAWN_PRE_UNLOCK",
+      "decision": "Withdraw the v1.0 200-position perturbation sensitivity without replacement. Current inputs lack verified Admin-2 boundaries and resampleable climate rasters matching the official displacement restriction; double-jittering a displaced point cannot recover the true point."
+    },
+    {
+      "id": "A2_NIGERIA_EVIDENCE",
+      "status": "VERIFIED",
+      "decision": "Nigeria displacement is restricted to LGA (Admin-2).",
+      "readme_sha256": "6CFBA1163033644A6F29CB3382D78BA8D2FA856B6697089A0B21BF73033538A2"
+    },
+    {
+      "id": "A2_BURKINA_EVIDENCE",
+      "status": "VERIFIED",
+      "decision": "Burkina Faso displacement is restricted to Province (Admin-2).",
+      "readme_sha256": "5E6486927548552C50FD65E0C62BC62AD90A7F0E6E983086AE93B043BFBB0928"
+    },
+    {
+      "id": "A2_RETAINED",
+      "status": "LOCKED_PRE_UNLOCK",
+      "decision": "Retain 25 km and 100 km as distance-threshold robustness checks only. They are not displacement corrections. Treat displacement-related exposure measurement error as a limitation."
+    }
+  ],
+  "unchanged": [
+    "outcome and denominator",
+    "scheme-A primary exposure",
+    "country roles",
+    "minimum adjustment set",
+    "multiplicity",
+    "support gate",
+    "missing-data rules",
+    "privacy and result-sealing rules"
+  ],
+  "authorization": {
+    "task_03_modeling": false,
+    "task_03_read_sealed_results": false,
+    "task_04_only_additional_run": "scheme B followed by repeated sealed dual-run QC",
+    "displacement_perturbation_allowed": false
+  }
+}
