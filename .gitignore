@@ -1,0 +1,40 @@
+# Restricted and provider-controlled data
+*.dta
+*.sav
+*.sas7bdat
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.geojson
+*.gpkg
+*.nc
+*.grib
+*.grib2
+*.tif
+*.tiff
+*.zip
+restricted_*.csv
+sealed_*.csv
+sealed_*.json
+raw/
+data/
+secure/
+staging/
+
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key
+credentials*
+cookies*
+
+# Runtime artifacts
+__pycache__/
+*.py[cod]
+.Rhistory
+.RData
+.Rproj.user/
+
